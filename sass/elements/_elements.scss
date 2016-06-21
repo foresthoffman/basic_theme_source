@@ -12,6 +12,40 @@ body {
 	background: $color__background-body; /* Fallback for when there is no custom background color defined. */
 }
 
+#page {
+	width: 100%;
+	@include center-block;
+}
+
+#primary {
+	float: left;
+	@include content_padding;
+	width: $size__site-main;
+	background-color: $color__background-primary;
+}
+
+#secondary {
+	@extend #primary;
+	float: right;
+	width: $size__site-sidebar;
+}
+
+.site-header {
+	margin-bottom: $margin__header-bottom;
+}
+
+.site-footer {
+	margin-top: $margin__footer-top;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	text-align: center;
+	height: 40px;
+	background-color: $color__background-primary;
+}
+
+/* misc */
+
 blockquote, q {
 	quotes: "" "";
 

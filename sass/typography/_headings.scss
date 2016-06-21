@@ -1,3 +1,30 @@
-h1, h2, h3, h4, h5, h6 {
+h1 {
+	font-family: $font__header;
+	@include font-size( 2.25 ); // 36px
 	clear: both;
+}
+
+h2 {
+	@extend h1;
+	@include font-size( 1.875 ); // 30px
+}
+
+h3 {
+	@extend h1;
+	@include font-size( 1.75 ); // 28px
+}
+
+h4 {
+	@extend h1;
+	@include font-size( 1.5 ); // 24px
+}
+
+h5 {
+	@extend h1;
+	@include font-size( 1.25 ); // 20px
+}
+
+h6 {
+	@extend h1;
+	@include font-size( 1.125 ); // 18px
 }

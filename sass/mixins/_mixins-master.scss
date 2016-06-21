@@ -1,6 +1,6 @@
 // Rem output with px fallback
 @mixin font-size($sizeValue: 1) {
-	font-size: ($sizeValue * 16) * 1px;
+	font-size: ($sizeValue * 18) * 1px;
 	font-size: $sizeValue * 1rem;
 }
 
@@ -9,6 +9,13 @@
 	display: block;
 	margin-left: auto;
 	margin-right: auto;
+}
+
+@mixin content_padding() {
+	padding-left: $padding__content-left;
+	padding-right: $padding__content-right;
+	padding-top: $padding__content-top;
+	padding-bottom: $padding__content-bottom;
 }
 
 // Clearfix
@@ -21,4 +28,38 @@
 // Clear after (not all clearfix need this also)
 @mixin clearfix-after() {
 	clear: both;
+}
+
+// Flexbox
+@mixin flexbox( $on: null ) {
+	@if $on != null {
+		display: block;
+	} @else {
+		display: -webkit-box;
+		display: -moz-box;
+		display: -ms-flexbox;
+		display: -webkit-flex;
+		display: flex;
+	}
+}
+
+@mixin flex( $values: null ) {
+	@if $values != null {
+		-webkit-box-flex: $values;
+		-moz-box-flex: $values;
+		-webkit-flex: $values;
+		-ms-flex: $values;
+		flex: $values;
+	} @else {
+		-webkit-box-flex: 0;
+		-moz-box-flex: 0;
+		-webkit-flex: 0;
+		-ms-flex: 0;
+		flex: 0;
+	}
+}
+
+@mixin flex_justify( $value: null ) {
+	-webkit-justify-content: $value;
+	justify-content: $value;
 }
