@@ -13,25 +13,28 @@ body {
 }
 
 #page {
-	width: 100%;
+	width: $size__site-main;
 	@include center-block;
 }
 
 #primary {
-	float: left;
 	@include content_padding;
-	width: $size__site-main;
+	margin-bottom: $margin__content-bottom;
+	width: $size__site-primary;
 	background-color: $color__background-primary;
 }
 
 #secondary {
 	@extend #primary;
-	float: right;
+	margin-bottom: 0px;
 	width: $size__site-sidebar;
 }
 
 .site-header {
+	@include content_padding;
 	margin-bottom: $margin__header-bottom;
+	background-color: $color__background-header;
+	color: $color__text-header;
 }
 
 .site-footer {
@@ -40,8 +43,10 @@ body {
 	flex-direction: column;
 	justify-content: center;
 	text-align: center;
-	height: 40px;
-	background-color: $color__background-primary;
+	min-height: 64px;
+	height: auto;
+	background-color: $color__background-footer;
+	color: $color__text-footer;
 }
 
 /* misc */

@@ -1,5 +1,9 @@
-$size__site-main: 80%;
-$size__site-sidebar: 20%;
+$size__site-main-desktop: 80%;
+$size__site-main: 100%;
+$size__site-primary-desktop: 80%;
+$size__site-primary: 100%;
+$size__site-sidebar-desktop: 20%;
+$size__site-sidebar: 100%;
 
 $padding__content-left: 20px;
 $padding__content-right: 20px;
@@ -11,7 +15,9 @@ $padding__nav-top: 10px;
 $padding__nav-bottom: 5px;
 $padding__small: 2.5px 5px;
 
-$margin__header-bottom: 40px;
-$margin__footer-top: 40px;
+$margin__content-bottom: 20px;
+$margin__content-bottom-desktop: 0px;
+$margin__header-bottom: 20px;
+$margin__footer-top: 20px;
 $margin__nav-link-left: 10px;
 $margin__nav-link-right: 10px;
