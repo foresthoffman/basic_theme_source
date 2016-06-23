@@ -413,6 +413,9 @@ body {
   background-color: #333333;
   color: #eeeeee;
 }
+.site-header .site-title {
+  margin-top: 0px;
+}
 
 .site-footer {
   margin-top: 20px;
@@ -517,6 +520,10 @@ table {
   padding: 4px 6px 2px 6px;
 }
 
+.submit {
+  padding: 4px 6px 2px 6px;
+}
+
 button,
 input[type="button"],
 input[type="reset"],
@@ -606,19 +613,39 @@ textarea {
 ## Links
 --------------------------------------------------------------*/
 a {
-  color: royalblue;
+  color: #4a4a4a;
 }
 a:visited {
-  color: royalblue;
+  color: #4a4a4a;
 }
 a:hover, a:focus, a:active {
-  color: #0f2360;
+  color: black;
 }
 a:focus {
   outline: thin dotted;
 }
 a:hover, a:active {
   outline: 0;
+}
+
+.site-header a {
+  color: #eeeeee;
+}
+.site-header a:visited {
+  color: #eeeeee;
+}
+.site-header a:hover, .site-header a:focus, .site-header a:active {
+  color: #959595;
+}
+
+.site-footer a {
+  color: #eeeeee;
+}
+.site-footer a:visited {
+  color: #eeeeee;
+}
+.site-footer a:hover, .site-footer a:focus, .site-footer a:active {
+  color: #959595;
 }
 
 /*--------------------------------------------------------------
@@ -916,6 +943,78 @@ a:hover, a:active {
 /*--------------------------------------------------------------
 ## Comments
 --------------------------------------------------------------*/
+.comments-area {
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+.comments-area .no-comments {
+  margin: 1.5em 0 0 0;
+}
+.comments-area .comments-title {
+  margin-top: 0;
+}
+.comments-area .comment-list {
+  margin-bottom: 0;
+  padding-left: 0;
+}
+.comments-area .comment-list, .comments-area .comment-list ol {
+  list-style: none;
+}
+.comments-area .comment-list .comment-author.vcard {
+  margin-bottom: 5px;
+}
+.comments-area .comment-list .comment-author.vcard img {
+  vertical-align: middle;
+  margin: 0 5px 0 0;
+}
+.comments-area .comment-list .comment-body {
+  margin-top: 10px;
+  padding: 15px;
+  background-color: #aeaeae;
+}
+.comments-area .comment-list li.comment.depth-1:first-of-type > .comment-body {
+  margin-top: 0;
+}
+.comments-area .comment-list .bt-admin-comment {
+  border: dashed 1px #4a4a4a;
+  background-color: #eeeeee;
+}
+.comments-area .comment-list .comment-content p {
+  margin: 1rem 0;
+}
+.comments-area .comment-respond .comment-reply-title {
+  margin-bottom: 0;
+}
+.comments-area .comment-respond .comment-reply-title a {
+  text-shadow: none;
+}
+.comments-area .comment-respond .logged-in-as {
+  margin: 0 0 15px 0;
+}
+.comments-area .comment-respond .comment-notes {
+  margin: 1rem 0;
+}
+.comments-area .comment-respond .comment-form-comment {
+  margin: 0;
+}
+.comments-area .comment-respond .comment-form-comment textarea[name='comment'] {
+  max-width: 100%;
+  min-height: 200px;
+  padding: 5px 10px;
+}
+.comments-area .comment-respond .comment-form-author label,
+.comments-area .comment-respond .comment-form-email label,
+.comments-area .comment-respond .comment-form-url label {
+  clear: both;
+}
+.comments-area .comment-respond .comment-form-author input,
+.comments-area .comment-respond .comment-form-email input,
+.comments-area .comment-respond .comment-form-url input {
+  width: 100%;
+}
+
 .comment-content a {
   word-wrap: break-word;
 }
@@ -924,6 +1023,36 @@ a:hover, a:active {
   display: block;
 }
 
+@media screen and (min-width: 37.5em) {
+  .comment-list {
+    padding-left: 1em;
+  }
+
+  .comment-form-author,
+  .comment-form-email,
+  .comment-form-url {
+    display: inline-block;
+    margin: 10px 0 10px 0;
+  }
+
+  .comment-form-author,
+  .comment-form-email {
+    width: 48%;
+  }
+
+  .comment-form-author {
+    float: left;
+  }
+
+  .comment-form-email {
+    margin-left: 2%;
+    float: right;
+  }
+
+  .comment-form-url {
+    width: 100%;
+  }
+}
 /*--------------------------------------------------------------
 # Infinite scroll
 --------------------------------------------------------------*/

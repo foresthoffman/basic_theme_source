@@ -35,6 +35,10 @@ body {
 	margin-bottom: $margin__header-bottom;
 	background-color: $color__background-header;
 	color: $color__text-header;
+
+	.site-title {
+		margin-top: 0px;
+	}
 }
 
 .site-footer {

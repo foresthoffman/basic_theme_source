@@ -8,15 +8,29 @@ $color__background-button: #e6e6e6;
 $color__background-pre: #C9C9C9;
 $color__background-ins: #fff9c0;
 
+$color__text-main: #4A4A4A;
 $color__text-screen: #21759b;
+
+// Inputs
 $color__text-input: #666;
 $color__text-input-focus: #111;
-$color__link: royalblue;
-$color__link-visited: $color__link;
-$color__link-hover: darken( $color__link, 35 );
-$color__text-main: #4A4A4A;
+
+// Comments
+$color__background-comment: darken( $color__background-primary, 25 );
+$color__background-comment-admin: $color__background-primary;
+$color__border-comment-admin: $color__text-main;
+$color__text-comment-submit-hover: darken( $color__background-primary, 25 );
+
+// Links - see link_color() mixin
+$color__link: $color__text-main;
+
+// Header
 $color__text-header: #eee;
+$color__link-header: $color__text-header;
+
+// Footer
 $color__text-footer: $color__text-header;
+$color__link-footer: $color__text-footer;
 
 $color__border-button: #ccc #ccc #bbb;
 $color__border-button-hover: #ccc #bbb #aaa;
