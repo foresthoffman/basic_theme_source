@@ -1,4 +1,6 @@
 $color__background-body: #fff;
+$color__background-header: #333;
+$color__background-footer: $color__background-header;
 $color__background-primary: #eee;
 $color__background-screen: #fff;
 $color__background-hr: #ccc;
@@ -13,6 +15,8 @@ $color__link: royalblue;
 $color__link-visited: $color__link;
 $color__link-hover: darken( $color__link, 35 );
 $color__text-main: #4A4A4A;
+$color__text-header: #eee;
+$color__text-footer: $color__text-header;
 
 $color__border-button: #ccc #ccc #bbb;
 $color__border-button-hover: #ccc #bbb #aaa;

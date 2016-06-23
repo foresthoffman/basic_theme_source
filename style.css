@@ -149,7 +149,9 @@ svg:not(:root) {
 }
 
 figure {
-  margin: 1em 40px;
+  margin: 0;
+  max-width: 100% !important;
+  height: auto;
 }
 
 hr {
@@ -388,32 +390,40 @@ body {
 }
 
 #primary, #secondary {
-  float: left;
   padding-left: 20px;
   padding-right: 20px;
   padding-top: 20px;
   padding-bottom: 20px;
-  width: 80%;
+  margin-bottom: 20px;
+  width: 100%;
   background-color: #eeeeee;
 }
 
 #secondary {
-  float: right;
-  width: 20%;
+  margin-bottom: 0px;
+  width: 100%;
 }
 
 .site-header {
-  margin-bottom: 40px;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  margin-bottom: 20px;
+  background-color: #333333;
+  color: #eeeeee;
 }
 
 .site-footer {
-  margin-top: 40px;
+  margin-top: 20px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   text-align: center;
-  height: 40px;
-  background-color: #eeeeee;
+  min-height: 64px;
+  height: auto;
+  background-color: #333333;
+  color: #eeeeee;
 }
 
 /* misc */
@@ -432,7 +442,8 @@ hr {
 }
 
 ul, ol {
-  margin: 0 0 1.5em 3em;
+  margin: 0 0 2em;
+  padding-left: 20px;
 }
 
 ul {
@@ -443,10 +454,14 @@ ol {
   list-style: decimal;
 }
 
+li {
+  padding: 5px 0;
+}
+
 li > ul,
 li > ol {
   margin-bottom: 0;
-  margin-left: 1.5em;
+  padding-left: 20px;
 }
 
 dt {
@@ -472,6 +487,36 @@ table {
 /*--------------------------------------------------------------
 # Forms
 --------------------------------------------------------------*/
+.search-form {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+.search-form label {
+  -webkit-box-flex: 3;
+  -moz-box-flex: 3;
+  -webkit-flex: 3;
+  -ms-flex: 3;
+  flex: 3;
+  margin-right: 10px;
+}
+.search-form label .search-field {
+  width: 100%;
+  padding: 1px 5px 1px 5px;
+}
+.search-form .search-submit {
+  -webkit-box-flex: 1;
+  -moz-box-flex: 1;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  padding: 4px 6px 2px 6px;
+}
+
 button,
 input[type="button"],
 input[type="reset"],
@@ -580,6 +625,11 @@ a:hover, a:active {
 ## Menus
 --------------------------------------------------------------*/
 .main-navigation {
+  background-color: #333333;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 10px;
+  padding-bottom: 10px;
   clear: both;
   display: block;
   float: left;
@@ -588,44 +638,122 @@ a:hover, a:active {
 .main-navigation ul {
   display: none;
   list-style: none;
-  margin: 0;
+  margin: 20px 0 0;
   padding-left: 0;
 }
 .main-navigation ul ul {
-  box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
-  float: left;
-  position: absolute;
-  top: 1.5em;
-  left: -999em;
-  z-index: 99999;
-}
-.main-navigation ul ul ul {
-  left: -999em;
-  top: 0;
-}
-.main-navigation ul ul li:hover > ul, .main-navigation ul ul li.focus > ul {
-  left: 100%;
-}
-.main-navigation ul ul a {
-  width: 200px;
+  margin: 0;
+  padding-left: 15px;
 }
 .main-navigation ul li:hover > ul,
 .main-navigation ul li.focus > ul {
   left: auto;
 }
 .main-navigation li {
-  float: left;
+  padding: 5px 0;
+  float: none;
   position: relative;
+}
+.main-navigation li.page_item_has_children {
+  padding-bottom: 0;
 }
 .main-navigation a {
   display: block;
   text-decoration: none;
 }
 
+.site-main .comment-navigation,
+.site-main .posts-navigation,
+.site-main .post-navigation {
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-bottom: 20px;
+}
+.site-main .comment-navigation .nav-links,
+.site-main .posts-navigation .nav-links,
+.site-main .post-navigation .nav-links {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+}
+.site-main .comment-navigation .nav-links .nav-previous,
+.site-main .posts-navigation .nav-links .nav-previous,
+.site-main .post-navigation .nav-links .nav-previous {
+  -webkit-box-flex: 1 50%;
+  -moz-box-flex: 1 50%;
+  -webkit-flex: 1 50%;
+  -ms-flex: 1 50%;
+  flex: 1 50%;
+}
+.site-main .comment-navigation .nav-links .nav-previous:before,
+.site-main .posts-navigation .nav-links .nav-previous:before,
+.site-main .post-navigation .nav-links .nav-previous:before {
+  content: "\2190\a0";
+}
+.site-main .comment-navigation .nav-links .nav-next,
+.site-main .posts-navigation .nav-links .nav-next,
+.site-main .post-navigation .nav-links .nav-next {
+  text-align: right;
+  -webkit-box-flex: 1 50%;
+  -moz-box-flex: 1 50%;
+  -webkit-flex: 1 50%;
+  -ms-flex: 1 50%;
+  flex: 1 50%;
+}
+.site-main .comment-navigation .nav-links .nav-next:after,
+.site-main .posts-navigation .nav-links .nav-next:after,
+.site-main .post-navigation .nav-links .nav-next:after {
+  content: "\a0\2192";
+}
+
+@media screen and (min-width: 37.5em) {
+  .main-navigation {
+    padding-top: 10px;
+    padding-bottom: 5px;
+  }
+  .main-navigation ul {
+    display: block;
+  }
+  .main-navigation ul ul {
+    background-color: #333333;
+    float: left;
+    padding-left: 10px;
+    position: absolute;
+    top: 1.5em;
+    left: -999em;
+    z-index: 99999;
+  }
+  .main-navigation ul ul ul {
+    left: -999em;
+    top: 0;
+  }
+  .main-navigation ul ul li:hover > ul, .main-navigation ul ul li.focus > ul {
+    left: 100%;
+  }
+  .main-navigation ul ul a {
+    width: 200px;
+  }
+  .main-navigation li {
+    float: left;
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+  .main-navigation li:first-of-type {
+    margin-left: 0px;
+  }
+}
 /* Small menu. */
 .menu-toggle,
 .main-navigation.toggled ul {
   display: block;
+}
+
+.menu-toggle {
+  width: 100%;
+  font-size: 18px;
+  font-size: 1rem;
 }
 
 @media screen and (min-width: 37.5em) {
@@ -637,26 +765,6 @@ a:hover, a:active {
     display: block;
   }
 }
-.site-main .comment-navigation, .site-main
-.posts-navigation, .site-main
-.post-navigation {
-  margin: 0 0 1.5em;
-  overflow: hidden;
-}
-.comment-navigation .nav-previous,
-.posts-navigation .nav-previous,
-.post-navigation .nav-previous {
-  float: left;
-  width: 50%;
-}
-.comment-navigation .nav-next,
-.posts-navigation .nav-next,
-.post-navigation .nav-next {
-  float: right;
-  text-align: right;
-  width: 50%;
-}
-
 /*--------------------------------------------------------------
 # Accessibility
 --------------------------------------------------------------*/
@@ -767,7 +875,7 @@ a:hover, a:active {
 }
 
 .hentry {
-  margin: 0 0 1.5em;
+  margin: 0 0 2em;
 }
 
 .byline,
@@ -784,6 +892,20 @@ a:hover, a:active {
 .entry-content,
 .entry-summary {
   margin: 1.5em 0 0;
+}
+
+.comments-link,
+.tags-links,
+.cat-links,
+.edit-link,
+.top-link {
+  margin-right: 0;
+  margin-top: 5px;
+  display: block;
+}
+
+.entry-footer span:first-of-type {
+  margin-top: 0;
 }
 
 .page-links {
@@ -849,7 +971,7 @@ object {
   margin-right: auto;
 }
 .wp-caption .wp-caption-text {
-  margin: 0.8075em 0;
+  margin-top: 0.8075em;
 }
 
 .wp-caption-text {

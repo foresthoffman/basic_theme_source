@@ -1,3 +1,23 @@
+.search-form {
+	@include flexbox();
+	@include flex_justify(center);
+
+	label {
+		@include flex(3);
+		margin-right: 10px;
+		
+		.search-field {
+			width: 100%;
+			padding: 1px 5px 1px 5px;
+		}
+	}
+
+	.search-submit {
+		@include flex(1);
+		padding: 4px 6px 2px 6px;
+	}
+}
+
 @import "buttons";
 
 @import "fields";

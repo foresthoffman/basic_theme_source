@@ -3,7 +3,7 @@
 }
 
 .hentry {
-	margin: 0 0 1.5em;
+	margin: 0 0 2em;
 }
 
 .byline,
@@ -20,6 +20,20 @@
 .entry-content,
 .entry-summary {
 	margin: 1.5em 0 0;
+}
+
+.comments-link,
+.tags-links,
+.cat-links,
+.edit-link,
+.top-link {
+	margin-right: 0;
+	margin-top: 5px;
+	display: block;
+}
+
+.entry-footer span:first-of-type {
+	margin-top: 0;
 }
 
 .page-links {
