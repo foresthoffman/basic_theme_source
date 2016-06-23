@@ -18,6 +18,14 @@
 	padding-bottom: $padding__content-bottom;
 }
 
+@mixin no_border {
+	border: none;
+	border-radius: 0;
+	-webkit-border-radius: 0;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+}
+
 // Clearfix
 @mixin clearfix() {
 	content: "";
@@ -62,4 +70,17 @@
 @mixin flex_justify( $value: null ) {
 	-webkit-justify-content: $value;
 	justify-content: $value;
+}
+
+// Colors
+@mixin link_color( $color: null ) {
+	color: $color;
+	&:visited {
+		color: $color;
+	}
+	&:hover,
+	&:focus,
+	&:active {
+		color: darken( $color, 35 );
+	}
 }

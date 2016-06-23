@@ -49,8 +49,12 @@ if ( post_password_required() ) {
 
 		<ol class="comment-list">
 			<?php
+
+				// use the theme's custom Comment_Walker child class
+				$bt_walker = new BTCommentWalker;
 				wp_list_comments( array(
-					'style'      => 'ol',
+					'walker'	 => $bt_walker,
+					'style'		 => 'ol',
 					'short_ping' => true,
 				) );
 			?>
