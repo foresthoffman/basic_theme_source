@@ -77,6 +77,25 @@ hr {
 	margin-bottom: 1.5em;
 }
 
+// Desktop Styles
+@media screen and ( min-width: 1020px ) {
+	#page {
+		width: 1000px;
+	}
+
+	#primary {
+		float: left;
+		width: $size__site-primary-desktop;
+		margin-bottom: $margin__content-bottom-desktop;
+	}
+
+	#secondary {
+		float: right;
+		width: $size__site-sidebar-desktop;
+		margin-left: $margin__sidebar-desktop-left;
+	}
+}
+
 @import "lists";
 
 img {
