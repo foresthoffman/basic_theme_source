@@ -1,3 +1,4 @@
+// Widths
 $size__site-main-desktop: 80%;
 $size__site-main: 100%;
 $size__site-primary-desktop: 80%;
@@ -5,6 +6,7 @@ $size__site-primary: 100%;
 $size__site-sidebar-desktop: 20%;
 $size__site-sidebar: 100%;
 
+// Padding
 $padding__content-left: 20px;
 $padding__content-right: 20px;
 $padding__content-top: 20px;
@@ -14,7 +16,10 @@ $padding__nav-bottom-mobile: 10px;
 $padding__nav-top: 10px;
 $padding__nav-bottom: 5px;
 $padding__small: 2.5px 5px;
+$padding__code-horiz: 5px;
+$padding__code-vert: $padding__code-horiz / 2;
 
+// Margins
 $margin__content-bottom: 20px;
 $margin__content-bottom-desktop: 0px;
 $margin__header-bottom: 20px;

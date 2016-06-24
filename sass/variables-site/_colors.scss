@@ -1,15 +1,21 @@
+// Font Colors
+$color__text-main: #4A4A4A;
+$color__text-screen: #21759b;
+$color__text-light: #eee;
+
+// Background Colors (misc)
 $color__background-body: #fff;
 $color__background-header: #333;
 $color__background-footer: $color__background-header;
-$color__background-primary: #eee;
+$color__background-primary: $color__text-light;
 $color__background-screen: #fff;
 $color__background-hr: #ccc;
 $color__background-button: #e6e6e6;
 $color__background-pre: #C9C9C9;
-$color__background-ins: #fff9c0;
+$color__background-code: #666;
 
-$color__text-main: #4A4A4A;
-$color__text-screen: #21759b;
+// Tables
+$color__background-th: darken( $color__background-primary, 25 );
 
 // Inputs
 $color__text-input: #666;
@@ -25,15 +31,19 @@ $color__text-comment-submit-hover: darken( $color__background-primary, 25 );
 $color__link: $color__text-main;
 
 // Header
-$color__text-header: #eee;
+$color__text-header: $color__text-light;
 $color__link-header: $color__text-header;
 
 // Footer
 $color__text-footer: $color__text-header;
 $color__link-footer: $color__text-footer;
 
+// Borders
 $color__border-button: #ccc #ccc #bbb;
 $color__border-button-hover: #ccc #bbb #aaa;
 $color__border-button-focus: #aaa #bbb #bbb;
 $color__border-input: #ccc;
 $color__border-abbr: #666;
+$color__border-quote-left: lighten( $color__text-main, 25 );
+$color__border-td: lighten( $color__text-main, 25 );
+$color__border-ins: $color__border-abbr;
