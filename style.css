@@ -103,7 +103,7 @@ abbr[title] {
 
 b,
 strong {
-  font-weight: bold;
+  font-weight: 700;
 }
 
 dfn {
@@ -245,7 +245,7 @@ textarea {
 }
 
 optgroup {
-  font-weight: bold;
+  font-weight: 700;
 }
 
 table {
@@ -349,13 +349,19 @@ code, kbd, tt, var {
   font-size: 0.9375rem;
 }
 
+code {
+  color: #eeeeee;
+  background-color: #666666;
+  padding: 2.5px 5px;
+}
+
 abbr, acronym {
-  border-bottom: 1px dotted #666666;
+  border-bottom: 2px dotted #666666;
   cursor: help;
 }
 
 mark, ins {
-  background: #fff9c0;
+  border-bottom: 2px dashed #666666;
   text-decoration: none;
 }
 
@@ -432,9 +438,15 @@ body {
 /* misc */
 blockquote, q {
   quotes: "" "";
+  border-left: 2px solid #8a8a8a;
+  padding-left: 20px;
 }
 blockquote:before, blockquote:after, q:before, q:after {
   content: "";
+}
+
+q {
+  display: block;
 }
 
 hr {
@@ -468,7 +480,7 @@ li > ol {
 }
 
 dt {
-  font-weight: bold;
+  font-weight: 700;
 }
 
 dd {
@@ -485,8 +497,34 @@ img {
 table {
   margin: 0 0 1.5em;
   width: 100%;
+  display: block;
+  overflow: auto;
+}
+table th {
+  padding: 2.5px 5px;
+  text-align: center;
+  background-color: #aeaeae;
+}
+table tr {
+  border: 1px solid #8a8a8a;
+}
+table td {
+  padding: 5px;
+  border: 1px solid #8a8a8a;
+}
+table td:first-child {
+  border: none;
+  border-radius: 0;
+  -webkit-border-radius: 0;
+  -webkit-appearance: none;
+  -moz-appearance: none;
 }
 
+@media screen and (min-width: 37.5em) {
+  table td, table th {
+    padding: 8px;
+  }
+}
 /*--------------------------------------------------------------
 # Forms
 --------------------------------------------------------------*/
@@ -646,6 +684,10 @@ a:hover, a:active {
 }
 .site-footer a:hover, .site-footer a:focus, .site-footer a:active {
   color: #959595;
+}
+
+a.bt_permlink {
+  text-decoration: none;
 }
 
 /*--------------------------------------------------------------
@@ -812,7 +854,7 @@ a:hover, a:active {
   display: block;
   font-size: 15.75px;
   font-size: 0.875rem;
-  font-weight: bold;
+  font-weight: 700;
   height: auto;
   left: 5px;
   line-height: normal;

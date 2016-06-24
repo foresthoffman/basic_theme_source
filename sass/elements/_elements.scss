@@ -57,11 +57,17 @@ body {
 
 blockquote, q {
 	quotes: "" "";
+	border-left: 2px solid $color__border-quote-left;
+	padding-left: $padding__content-left;
 
 	&:before,
 	&:after {
 		content: "";
 	}
+}
+
+q {
+	display: block;
 }
 
 hr {
