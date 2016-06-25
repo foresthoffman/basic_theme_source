@@ -38,6 +38,12 @@ body {
 
 	.site-title {
 		margin-top: 0px;
+		margin-bottom: $margin__site-title-bottom;
+	}
+
+	.site-description {
+		margin-top: $margin__header-desc-top;
+		margin-bottom: $margin__header-desc-bottom;
 	}
 }
 
@@ -75,6 +81,12 @@ hr {
 	border: 0;
 	height: 1px;
 	margin-bottom: 1.5em;
+}
+
+@media screen and ( min-width: 37.5em ) {
+	#page {
+		width: 95%;
+	}
 }
 
 // Desktop Styles
